@@ -5,8 +5,8 @@
 <!-- Start SC -->
 <div class="SC">
 
-<h2 class="title">Error 404</h2>
-<p> Page Not Found</p>
+<h2 class="title"><?php _e('Error 404', 'compositio'); ?></h2>
+<p><?php _e('Page Not Found', 'compositio'); ?></p>
 
 </div>
 <!-- End SC -->

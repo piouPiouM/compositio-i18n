@@ -6,8 +6,7 @@ while ( have_posts()) : the_post();
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-     <title><?php echo get_option('blogname'); ?> - Comments on <?php the_title(); ?></title>
-
+     <title><?php printf(__('%1$s - Comments on %2$s', 'compositio'), get_option('blogname'), the_title('','',false)); ?></title>
 	<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php echo get_option('blog_charset'); ?>" />
 	<style type="text/css" media="screen">
 		@import url( <?php bloginfo('stylesheet_url'); ?> );
@@ -19,12 +18,12 @@ while ( have_posts()) : the_post();
 
 <h1 id="header"><a href="" title="<?php echo get_option('blogname'); ?>"><?php echo get_option('blogname'); ?></a></h1>
 
-<h2 id="comments">Comments</h2>
+<h2 id="comments"><?php _e('Comments', 'compositio'); ?></h2>
 
-<p><a href="<?php echo get_post_comments_feed_link($post->ID); ?>"><abbr title="Really Simple Syndication">RSS</abbr> feed for comments on this post.</a></p>
+<p><a href="<?php echo get_post_comments_feed_link($post->ID); ?>"><?php _e('<abbr title="Really Simple Syndication">RSS</abbr> feed for comments on this post.', 'compositio'); ?></a></p>
 
 <?php if ('open' == $post->ping_status) { ?>
-<p>The <abbr title="Universal Resource Locator">URL</abbr> to TrackBack this entry is: <em><?php trackback_url() ?></em></p>
+<p><?php printf(__('The <abbr title="Universal Resource Locator">URL</abbr> to TrackBack this entry is: <em>%s</em>', 'compositio'), get_trackback_url()); ?></p>
 <?php } ?>
 
 <?php
@@ -42,43 +41,43 @@ if (!empty($post->post_password) && $_COOKIE['wp-postpass_'. COOKIEHASH] != $pos
 <?php foreach ($comments as $comment) { ?>
 	<li id="comment-<?php comment_ID() ?>">
 	<?php comment_text() ?>
-	<p><cite><?php comment_type('Comment', 'Trackback', 'Pingback'); ?> by <?php comment_author_link() ?> &#8212; <?php comment_date() ?> @ <a href="#comment-<?php comment_ID() ?>"><?php comment_time() ?></a></cite></p>
+	<p><cite><?php comment_type(__('Comment', 'compositio'), __('Trackback', 'compositio'), __('Pingback', 'compositio')); ?> <?php printf(__('by %1$s &#8212; %2$s @ <a href="#comment-%3$s">%4$s</a>', 'compositio'), get_comment_author_link(), get_comment_date(), get_comment_ID(), get_comment_time()); ?></a></cite></p>
 	</li>
 
 <?php } // end for each comment ?>
 </ol>
 <?php } else { // this is displayed if there are no comments so far ?>
-	<p>No comments yet.</p>
+	<p><?php _e('No comments yet.', 'compositio'); ?></p>
 <?php } ?>
 
 <?php if ('open' == $post->comment_status) { ?>
-<h2>Leave a comment</h2>
-<p>Line and paragraph breaks automatic, e-mail address never displayed, <acronym title="Hypertext Markup Language">HTML</acronym> allowed: <code><?php echo allowed_tags(); ?></code></p>
+<h2><?php _e('Leave a comment', 'compositio'); ?></h2>
+<p><?php sprintf(__('Line and paragraph breaks automatic, e-mail address never displayed, <acronym title="Hypertext Markup Language">HTML</acronym> allowed: <code>%s</code>', 'compositio'), allowed_tags()); ?></p>
 
 <form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform">
 <?php if ( $user_ID ) : ?>
-	<p>Logged in as <a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>. <a href="<?php echo get_option('siteurl'); ?>/wp-login.php?action=logout" title="Log out of this account">Logout &raquo;</a></p>
+	<p><?php printf(__('Logged in as <a href="%1$s">%2$s</a>. <a href="%3$s" title="Log out of this account">Log out &raquo;</a>', 'compositio'), get_option('siteurl') . '/wp-admin/profile.php', $user_identity, wp_logout_url()); ?></p>
 <?php else : ?>
 	<p>
 	  <input type="text" name="author" id="author" class="textarea" value="<?php echo $comment_author; ?>" size="28" tabindex="1" />
-	   <label for="author">Name</label>
+	   <label for="author"><?php _e('Name', 'compositio'); ?></label>
 	<input type="hidden" name="comment_post_ID" value="<?php echo $id; ?>" />
 	<input type="hidden" name="redirect_to" value="<?php echo attribute_escape($_SERVER["REQUEST_URI"]); ?>" />
 	</p>
 
 	<p>
 	  <input type="text" name="email" id="email" value="<?php echo $comment_author_email; ?>" size="28" tabindex="2" />
-	   <label for="email">E-mail</label>
+	   <label for="email"><?php _e('E-mail', 'compositio'); ?></label>
 	</p>
 
 	<p>
 	  <input type="text" name="url" id="url" value="<?php echo $comment_author_url; ?>" size="28" tabindex="3" />
-	   <label for="url"><abbr title="Universal Resource Locator">URL</abbr></label>
+	   <label for="url"><?php _e('<abbr title="Universal Resource Locator" lang="en" xml:lang="en">URL</abbr>', 'compositio'); ?></label>
 	</p>
 <?php endif; ?>
 
 	<p>
-	  <label for="comment">Your Comment</label>
+	  <label for="comment"><?php _e('Your Comment', 'compositio'); ?></label>
 	<br />
 	  <textarea name="comment" id="comment" cols="70" rows="4" tabindex="4"></textarea>
 	</p>
@@ -89,12 +88,12 @@ if (!empty($post->post_password) && $_COOKIE['wp-postpass_'. COOKIEHASH] != $pos
 	<?php do_action('comment_form', $post->ID); ?>
 </form>
 <?php } else { // comments are closed ?>
-<p>Sorry, the comment form is closed at this time.</p>
+<p><?php _e('Sorry, the comment form is closed at this time.', 'compositio'); ?></p>
 <?php }
 } // end password check
 ?>
 
-<div><strong><a href="javascript:window.close()">Close this window.</a></strong></div>
+<div><strong><a href="javascript:window.close()"><?php _e('Close this window.', 'compositio'); ?></a></strong></div>
 
 <?php // if you delete this the sky will fall on your head
 endwhile;
@@ -102,7 +101,7 @@ endwhile;
 
 <!-- // this is just the end of the motor - don't touch that line either :) -->
 <?php //} ?>
-<p class="credit"><?php timer_stop(1); ?> <cite>Powered by <a href="http://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform"><strong>Wordpress</strong></a></cite></p>
+<p class="credit"><?php timer_stop(1); ?> <cite><?php printf(__('Powered by <a href="%s" title="Powered by WordPress, state-of-the-art semantic personal publishing platform"><strong>WordPress</strong></a>', 'compositio'), 'http://wordpress.org/'); ?></cite></p>
 <?php // Seen at http://www.mijnkopthee.nl/log2/archive/2003/05/28/esc(18) ?>
 <script type="text/javascript">
 <!--

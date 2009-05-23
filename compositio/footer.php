@@ -7,10 +7,8 @@
 <!-- End BG -->
 
 <div class="footer">
-<p class="copy">Copyright &copy; 2007 - <? bloginfo('name'); ?> -  is proudly powered by <a style="text-decoration: none;" href="http://www.wordpress.com/">WordPress</a> | <?php wp_loginout(); ?></p> 
-<p class="theme">Compositio Theme is created by: <a href="http://designdisease.com/" title="Professional Blog Design">Design Disease</a> brought to you by <a href="http://premiumthemes.com/">PremiumThemes.com</a></p> 
+<p class="copy"><?php printf(__('Copyright &copy; 2007 - %1$s - is proudly powered by %2$s', 'compositio'), get_bloginfo('name'), '<a href="http://wordpress.org/" style="text-decoration: none;">WordPress</a>'); ?> | <?php wp_loginout(); ?></p>
+<p class="theme"><?php printf(__('Compositio Theme is created by: %1$s brought to you by %2$s', 'compositio'), '<a href="http://designdisease.com/" title="Professional Blog Design">Design Disease</a>', '<a href="http://premiumthemes.com/">PremiumThemes.com</a>'); ?></p>
 </div>
-
-
 </body>
 </html>

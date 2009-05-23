@@ -6,7 +6,7 @@
 
 <div class="p-head">
 <h1><?php the_title(); ?></h1>
-<p class="p-cat">In: <?php the_category('|') ?></p>
+<p class="p-cat"><?php printf(__('In: %s', 'compositio'), get_the_category_list('|', '', false)); ?></p>
 <small class="p-time">
 <strong class="day"><?php the_time('j') ?></strong>
 <strong class="month"><?php the_time('M') ?></strong>
@@ -15,20 +15,20 @@
 </div>
 
 <div class="p-con">
-<?php the_content('Read the rest of this entry &raquo;'); ?>
+<?php the_content(__('Read the rest of this entry &raquo;', 'compositio')); ?>
 <?php wp_link_pages(); ?>
-<?php edit_post_link('Edit this entry.', '<p class="edit">', '</p>'); ?>
+<?php edit_post_link(__('Edit this entry.', 'compositio'), '<p class="edit">', '</p>'); ?>
 </div>
 
- <?php if (function_exists('the_tags')) { ?> <?php the_tags('<div class="p-det"><ul><li class="p-det-tag">Tags: ', ', ', '</li></ul></div>'); ?> <?php } ?>
+ <?php if (function_exists('the_tags')) { ?> <?php the_tags('<div class="p-det"><ul>' . '<li class="p-det-tag">' . __('Tags: ', 'compositio'), ', ', '</li></ul></div>'); ?> <?php } ?>
 
 
 
-</div>	
+</div>
 
 
 <?php comments_template(); ?>
-				
+
 <?php endwhile; ?>
 <?php include("nav.php"); ?>
 <?php else : ?>

@@ -4,13 +4,14 @@
 <div class="search">
   <form method="get" action="<?php bloginfo('url'); ?>/">
    <fieldset>
-   <input type="text" value="<?php the_search_query(); ?>" name="s" /><button type="submit">Search</button>
+     <legend><span><?php _e('Search'); ?></span></legend>
+   <input type="text" value="<?php the_search_query(); ?>" name="s" /><button type="submit"><?php echo _c('Search|verb', 'compositio'); ?></button>
    </fieldset>
   </form>
 <div class="syn">
  <ul>
-  <li><a href="<?php bloginfo('rss2_url'); ?>">Entries</a> (RSS)</li>
-  <li><a href="<?php bloginfo('comments_rss2_url'); ?>">Comments</a> (RSS)</li>
+  <li><?php printf(__('<a href="%s">Entries</a> (RSS)', 'compositio'), get_bloginfo('rss2_url', 'display')); ?></li>
+  <li><?php printf(__('<a href="%s">Comments</a> (RSS)', 'compositio'), get_bloginfo('comments_rss2_url', 'display')); ?></li>
  </ul>
 </div>
 </div>
@@ -18,33 +19,33 @@
 
 <!-- Start About This Blog -->
 <div class="about">
-<h3>About this blog</h3>
+<h3><?php _e('About this blog', 'compositio'); ?></h3>
 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Quisque sed felis. Aliquam sit amet felis. Mauris semper, velit semper laoreet dictum, quam diam dictum urna, nec placerat elit nisl in quam. Etiam augue pede, molestie eget, rhoncus at, convallis ut, eros. Aliquam pharetra.</p>
 </div>
 <!-- End About This Blog -->
 
 
-<div class="photostream">
-<h3>Photostream</h3>
-<!-- Start Flickr Photostream -->
 <?php if (function_exists('get_flickrrss')) { ?>
+<div class="photostream">
+<h3><?php _e('Photostream', 'compositio'); ?></h3>
+<!-- Start Flickr Photostream -->
   <ul>
    <?php get_flickrrss(); ?> 
   </ul>
-<?php } ?>
 <!-- End Flickr Photostream -->
 </div>
+<?php } ?>
 
 
 <div class="categs">
   <div> 
-	<h3>Categories</h3> 
+	<h3><?php _e('Categories'); ?></h3>
 	 <ul> 
 		<?php wp_list_categories('show_count=1&title_li='); ?> 
 	</ul> 
 	</div>
 	<div style="margin-left: 10px;">
-	 <h3>Archives</h3>
+	 <h3><?php _e('Archives'); ?></h3>
 	  <ul>
 	   <?php wp_get_archives('type=monthly'); ?>
 	  </ul>
@@ -55,9 +56,9 @@
 <!-- Start Recent Comments/Articles -->
 <div class="recent">
  <ul class="tabs">
-  <li><a class="active" href="#tab-comments">Recent Comments</a></li>
-  <li><a href="#tab-posts">Recent Posts</a></li>
-  <li><a style="margin-right:0px;" href="#tab-tags">Tags</a></li>
+  <li><a class="active" href="#tab-comments"><?php _e('Recent Comments', 'compositio'); ?></a></li>
+  <li><a href="#tab-posts"><?php _e('Recent Posts', 'compositio'); ?></a></li>
+  <li><a style="margin-right:0px;" href="#tab-tags"><?php _e('Tags', 'compositio'); ?></a></li>
  </ul>
  <ul id="tab-comments">
   <?php dp_recent_comments(5); ?>

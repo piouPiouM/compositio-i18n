@@ -6,8 +6,8 @@
 <div <?php post_class(); ?> style="margin-bottom: 40px;">
       			
 <div class="p-head">
-<h2><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-<p class="p-cat">In: <?php the_category('|') ?></p>
+<h2><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php printf(__('Permanent Link to %s', 'compositio'), the_title_attribute('echo=0')); ?>"><?php the_title(); ?></a></h2>
+<p class="p-cat"><?php printf(__('In: %s', 'compositio'), get_the_category_list('|', '', false)); ?></p>
 <small class="p-time">
 <strong class="day"><?php the_time('j') ?></strong>
 <strong class="month"><?php the_time('M') ?></strong>
@@ -17,17 +17,17 @@
 
 
 <div class="p-con">
-<?php the_content('Read the rest of this entry &raquo;'); ?>
+<?php the_content(__('Read the rest of this entry &raquo;', 'compositio')); ?>
 <div class="clear"></div>
 <?php wp_link_pages(); ?>
-<?php edit_post_link('Edit this entry.', '<p class="edit">', '</p>'); ?>
+<?php edit_post_link(__('Edit this entry.', 'compositio'), '<p class="edit">', '</p>'); ?>
 </div>
 
 
 <div class="p-det">
  <ul>
-   <li class="p-det-com"><?php comments_popup_link('No Comments', '(1) Comment', '(%) Comments'); ?></li>
-  <?php if (function_exists('the_tags')) { ?> <?php the_tags('<li class="p-det-tag">Tags: ', ', ', '</li>'); ?> <?php } ?>
+   <li class="p-det-com"><?php comments_popup_link(__('No Comments', 'compositio'), __('(1) Comment', 'compositio'), __('(%) Comments', 'compositio'), '', __('Comments Closed', 'compositio')); ?></li>
+  <?php if (function_exists('the_tags')) { ?> <?php the_tags('<li class="p-det-tag">' . __('Tags: ', 'compositio'), ', ', '</li>'); ?> <?php } ?>
 </ul>
 </div>
 

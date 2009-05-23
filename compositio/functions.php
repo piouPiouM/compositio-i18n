@@ -55,7 +55,7 @@ function dp_recent_comments($no_comments = 10, $comment_len = 100) {
 			ob_end_flush();
 		} 
 	} else { 
-		echo "<li>No comments</li>";
+		echo '<li>', __('No comments', 'compositio'), '</li>';
 	}
 }
 
@@ -117,7 +117,7 @@ function evidens_admin()
 	}
 
 	/* SHOW THEME CUSTOMIZE PAGE HERE */
-	add_theme_page(__('Logo Options'), __('Logo Options'), 'edit_themes', basename(__FILE__), 'evidens_headeropt_page');
+	add_theme_page(__('Logo Options', 'compositio'), __('Logo Options', 'compositio'), 'edit_themes', basename(__FILE__), 'evidens_headeropt_page');
 }
 
 function evidens_headeropt_page()
@@ -133,30 +133,29 @@ function evidens_headeropt_page()
 
 <div class="wrap">
 <div id="icon-themes" class="icon32"><br /></div>
-<h2><strong><a href="http://designdisease.com/">Compositio Theme</a></strong> - Logo Options</h2>
+<h2><?php printf(__('<strong><a href="%s">Compositio Theme</a></strong> - Logo Options', 'compositio'), 'http://designdisease.com/'); ?></h2>
 <hr class="hr" />
 
 <?php
-	if ( $_REQUEST['action'] == 'save' ) echo '<div id="message" class="updated fade"><p><strong>Settings saved.</strong></p></div>';
+	if ( $_REQUEST['action'] == 'save' ) echo '<div id="message" class="updated fade"><p><strong>' , __('Settings saved.', 'compositio'), '</strong></p></div>';
 	?>
 	<form method="post">
-		<p class="select">	<strong>Select Logo Type:</strong>&nbsp;&nbsp;<label for="evidens_header_text"><input type="radio" name="evidens_header" value="text" id="evidens_header_text" <?php if ( get_option('evidens_header') == 'text' ) echo 'checked="checked"'?> /> 
-		  Text Logo</label> <label for="evidens_header_logo">&nbsp;
-	    <input type="radio" name="evidens_header" value="logo" id="evidens_header_logo" <?php if ( get_option('evidens_header') == 'logo' ) echo 'checked="checked"'?> /> Image</label> 
-		  Logo</p>
+		<p class="select">	<strong><?php _e('Select Logo Type:', 'compositio'); ?></strong>&nbsp;&nbsp;<label for="evidens_header_text"><input type="radio" name="evidens_header" value="text" id="evidens_header_text" <?php if ( get_option('evidens_header') == 'text' ) echo 'checked="checked"'?> /> 
+		  <?php _e('Text Logo', 'compositio'); ?></label> <label for="evidens_header_logo">&nbsp;
+	    <input type="radio" name="evidens_header" value="logo" id="evidens_header_logo" <?php if ( get_option('evidens_header') == 'logo' ) echo 'checked="checked"'?> /> <?php _e('Image Logo', 'compositio'); ?></label></p>
          <ul>
-          <li>1. <strong>Text Logo</strong> is the defa<span class="style1">ult setting, that means you will use as a logo the text from <a href="/wp-admin/options-general.php">Blog Titile</a></span> and <a href="/wp-admin/options-general.php">Tagline</a></li>
-          <li>2. <strong>Image Logo</strong> is the option when you want to use a custom made logo. Upload your logo in the root folder of Compositio theme and name it <strong>logo.png</strong>. You can use the <strong>PSD Logo Template</strong> in the source folder of Compositio Theme. (Image limitations: 590px/85px)</li>
+             <li><?php printf(__('1. <strong>Text Logo</strong> is the <span class="style1">default setting, that means you will use as a logo the text from <a href="%1$s">Blog Titile</a></span> and <a href="%2$s">Tagline</a>', 'compositio'), '/wp-admin/options-general.php', '/wp-admin/options-general.php'); ?></li>
+               <li><?php _e('2. <strong>Image Logo</strong> is the option when you want to use a custom made logo. Upload your logo in the root folder of Compositio theme and name it <strong>logo.png</strong>. You can use the <strong>PSD Logo Template</strong> in the source folder of Compositio Theme. (Image limitations: 590px/85px)', 'compositio'); ?></li>
       </ul>    
          
 <p class="submit">
 <input type="hidden" name="savetype" value="header" />
-<input name="save" type="submit" value="Save changes" />
+<input name="save" type="submit" value="<?php _e('Save changes', 'compositio'); ?>" />
 <input type="hidden" name="action" value="save" />
 </p>
 </form>
 <hr class="hr" />
-<small class="note">Fore more updates regarding this theme visit us at <a href="http://designdisease.com">DesignDisease.com</a></small></div>
+<small class="note"<?php printf(__('Fore more updates regarding this theme visit us at %s', 'compositio'), '<a href="http://designdisease.com">DesignDisease.com</a>'); ?></small></div>
 
 
 <?php } function evidens_setup()
