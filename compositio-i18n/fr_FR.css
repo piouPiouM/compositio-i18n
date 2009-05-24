@@ -1,0 +1,4 @@
+@charset "utf8";
+.SR .search legend span { width:68px }
+.SR .search input { background-position:68px 0; padding:4px 4px 0 75px; width:138px }
+.SR .recent .tabs li a { font-size:13px; line-height:14px; padding:3px 6px 9px 6px; margin-right:3px }
