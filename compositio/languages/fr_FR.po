@@ -1,0 +1,454 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Compositio Theme 1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-05-24 01:29+0100\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Mehdi Kabab <pub at pioupioum dot fr>\n"
+"Language-Team: French (France) <pub at pioupioum dot fr>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n>1\n"
+"X-Poedit-Language: French\n"
+"X-Poedit-Country: FRANCE\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;__ ;_e;_e ;_c;_c ;__ngettext;__ngettext\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../404.php:8
+msgid "Error 404"
+msgstr "Erreur 404"
+
+#: ../404.php:9
+msgid "Page Not Found"
+msgstr "Page introuvable"
+
+#: ../archive.php:6
+#, php-format
+msgid "Archive for the &#8216;%s&#8217; Category"
+msgstr "Archives de la catégorie &#8216;%s&#8217;"
+
+#: ../archive.php:8
+#, php-format
+msgid "Posts Tagged &#8216;%s&#8217;"
+msgstr "Archives pour le tag &#8216;%s&#8217;"
+
+#: ../archive.php:10
+#, php-format
+msgid "Archive for %s|Daily archive page"
+msgstr "Archives du %s"
+
+#: ../archive.php:10
+#: ../comments.php:31
+msgid "F jS, Y"
+msgstr "j F Y"
+
+#: ../archive.php:12
+#, php-format
+msgid "Archive for %s|Monthly archive page"
+msgstr "Archives du mois de %s"
+
+#: ../archive.php:12
+msgid "F, Y"
+msgstr "F Y"
+
+#: ../archive.php:14
+#, php-format
+msgid "Archive for %s|Yearly archive page"
+msgstr "Archives de l'année %s"
+
+#: ../archive.php:14
+msgid "Y"
+msgstr "Y"
+
+#: ../archive.php:16
+msgid "Author Archive"
+msgstr "Archives par auteur"
+
+#: ../archive.php:18
+msgid "Blog Archives"
+msgstr "Archives du blog"
+
+#: ../archive.php:29
+#: ../index.php:9
+#: ../search.php:13
+#, php-format
+msgid "Permanent Link to %s"
+msgstr "Lien permanent vers %s"
+
+#: ../archive.php:30
+#: ../index.php:10
+#: ../search.php:14
+#, php-format
+msgid "In: %s"
+msgstr "Dans&nbsp;: %s"
+
+#: ../archive.php:44
+#: ../index.php:29
+#: ../search.php:28
+msgid "No Comments"
+msgstr "Aucun commentaire"
+
+#: ../archive.php:44
+#: ../index.php:29
+#: ../search.php:28
+msgid "(1) Comment"
+msgstr "1 Commentaire"
+
+#: ../archive.php:44
+#: ../index.php:29
+#: ../search.php:28
+msgid "(%) Comments"
+msgstr "% Commentaires"
+
+#: ../archive.php:44
+#: ../index.php:29
+#: ../search.php:28
+msgid "Comments Closed"
+msgstr "Commentaires fermés"
+
+#: ../archive.php:45
+#: ../index.php:30
+#: ../search.php:29
+msgid "Tags: "
+msgstr "Tags&nbsp;:"
+
+#: ../archive.php:56
+msgid "Not found."
+msgstr "Rien n'a été trouvé."
+
+#: ../archives.php:9
+msgid "Archives by Month:"
+msgstr "Archives par mois&nbsp;:"
+
+#: ../archives.php:15
+msgid "Archives by Subject:"
+msgstr "Archives par catégorie&nbsp;:"
+
+#: ../comments-popup.php:9
+#, php-format
+msgid "%1$s - Comments on %2$s"
+msgstr "%1$s - Commentaires de l'article %2$s"
+
+#: ../comments-popup.php:21
+msgid "Comments"
+msgstr "Commentaires"
+
+#: ../comments-popup.php:23
+msgid "<abbr title=\"Really Simple Syndication\">RSS</abbr> feed for comments on this post."
+msgstr "Flux <abbr title=\"Really Simple Syndication\" xml:lang=\"en\" lang=\"en\">RSS</abbr> pour les commentaires de cet article."
+
+#: ../comments-popup.php:26
+#, php-format
+msgid "The <abbr title=\"Universal Resource Locator\">URL</abbr> to TrackBack this entry is: <em>%s</em>"
+msgstr "L'<abbr title=\"Universal Resource Locator\" xml:lang=\"en\" lang=\"en\">URL</abbr> du rétrolien est &nbsp;: <em>%s</em>"
+
+#: ../comments-popup.php:44
+msgid "Comment"
+msgstr "Commentaire"
+
+#: ../comments-popup.php:44
+msgid "Trackback"
+msgstr "Rétrolien"
+
+#: ../comments-popup.php:44
+msgid "Pingback"
+msgstr "Ping"
+
+#: ../comments-popup.php:44
+#, php-format
+msgid "by %1$s &#8212; %2$s @ <a href=\"#comment-%3$s\">%4$s</a>"
+msgstr "par %1$s &#8212; %2$s @ <a href=\"#comment-%3$s\">%4$s</a>"
+
+#: ../comments-popup.php:50
+msgid "No comments yet."
+msgstr "Pas encore de commentaires."
+
+#: ../comments-popup.php:54
+msgid "Leave a comment"
+msgstr "Poster un commentaire"
+
+#: ../comments-popup.php:55
+#, php-format
+msgid "Line and paragraph breaks automatic, e-mail address never displayed, <acronym title=\"Hypertext Markup Language\">HTML</acronym> allowed: <code>%s</code>"
+msgstr "Les retours à la ligne et les paragraphes seront automatiquement ajoutées, l'adresse e-mail n'est jamais affichée, les balises <acronym title=\"Hypertext Markup Language\" lang=\"en\" xml:lang=\"en\">HTML</acronym> sont&nbsp;: <code>%s</code>"
+
+#: ../comments-popup.php:59
+#, php-format
+msgid "Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of this account\">Log out &raquo;</a>"
+msgstr "Connecté en tant que <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Se déconnecter de ce compte\">Se déconnecter &raquo;</a>"
+
+#: ../comments-popup.php:63
+msgid "Name"
+msgstr "Nom"
+
+#: ../comments-popup.php:70
+msgid "E-mail"
+msgstr "E-mail"
+
+#: ../comments-popup.php:75
+msgid "<abbr title=\"Universal Resource Locator\" lang=\"en\" xml:lang=\"en\">URL</abbr>"
+msgstr "<abbr title=\"Universal Resource Locator\" lang=\"en\" xml:lang=\"en\">URL</abbr>"
+
+#: ../comments-popup.php:80
+msgid "Your Comment"
+msgstr "Votre commentaire"
+
+#: ../comments-popup.php:91
+msgid "Sorry, the comment form is closed at this time."
+msgstr "Désolé, les commentaires sont actuellement fermés."
+
+#: ../comments-popup.php:96
+msgid "Close this window."
+msgstr "Fermer cette fenêtre."
+
+#: ../comments-popup.php:104
+#, php-format
+msgid "Powered by <a href=\"%s\" title=\"Powered by WordPress, state-of-the-art semantic personal publishing platform\"><strong>WordPress</strong></a>"
+msgstr "Propulsé par <a href=\"%s\" title=\"Propulsé par WordPress, une plate-forme de publication personnelle à la pointe de la sémantique\"><strong>WordPress</strong></a>"
+
+#: ../comments.php:3
+msgid "Please do not load this page directly. Thanks!"
+msgstr "Merci de ne pas charger pas cette page directement&nbsp;!"
+
+#: ../comments.php:9
+msgid "This post is password protected. Enter the password to view comments."
+msgstr "Cet article est protégé par mot de passe. Entrez le mot de passe pour lire ses commentaires."
+
+#: ../comments.php:24
+#, php-format
+msgid "%1$s to %2$s"
+msgstr "%1$s pour %2$s"
+
+#: ../comments.php:24
+msgid "No Responses"
+msgstr "Aucune réponse"
+
+#: ../comments.php:24
+msgid "1 Response"
+msgstr "1 réponse"
+
+#: ../comments.php:24
+msgid "% Responses"
+msgstr "% réponses"
+
+#: ../comments.php:28
+msgid "Avatar"
+msgstr "Avatar"
+
+#: ../comments.php:31
+#, php-format
+msgid "<a href=\"#comment-%1$s\">%2$s at %3$s</a>"
+msgstr "<a href=\"#comment-%1$s\">%2$s à %3$s</a>"
+
+#: ../comments.php:31
+msgid "edit"
+msgstr "Éditer"
+
+#: ../comments.php:33
+msgid "Your comment is awaiting moderation."
+msgstr "Votre commentaire est en attente de modération."
+
+#: ../comments.php:45
+msgid "Comments are closed."
+msgstr "Les commentaires sont fermés."
+
+#: ../comments.php:51
+msgid "Comment Form"
+msgstr "Ajouter un commentaire"
+
+#: ../comments.php:54
+#, php-format
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr "Vous devez être <a href=\"%s\">connecté</a> pour poster un commentaire."
+
+#: ../comments.php:58
+#, php-format
+msgid "Logged in as <a href=\"%1$s\">%2$s</a>."
+msgstr "Connecté(e) en tant que <a href=\"%1$s\">%2$s</a>."
+
+#: ../comments.php:60
+#, php-format
+msgid "Your Name%s"
+msgstr "Nom ou pseudo%s"
+
+#: ../comments.php:60
+#: ../comments.php:61
+msgid " (required)"
+msgstr " (requis)"
+
+#: ../comments.php:61
+#, php-format
+msgid "Your Email%s"
+msgstr "E-mail%s"
+
+#: ../comments.php:62
+msgid "Your URL"
+msgstr "Site Web"
+
+#: ../comments.php:65
+msgid "Submit Comment"
+msgstr "Poster le commentaire"
+
+#: ../footer.php:10
+#, php-format
+msgid "Copyright &copy; 2007 - %1$s - is proudly powered by %2$s"
+msgstr "Copyright &copy; 2007 - %1$s - Propulsé par %2$s"
+
+#: ../footer.php:11
+#, php-format
+msgid "Compositio Theme is created by: %1$s brought to you by %2$s"
+msgstr "Le thème Compositio est créé par&nbsp;: %1$s acheté pour vous par %2$s – Traduction française <a href=\"http://pioupioum.fr/\" title=\"\">piouPiouM.fr</a>."
+
+#: ../functions.php:58
+msgid "No comments"
+msgstr "Aucun commentaire"
+
+#: ../functions.php:66
+msgid "Anonymous"
+msgstr "Anonyme"
+
+#: ../functions.php:120
+msgid "Logo Options"
+msgstr "Options du logo"
+
+#: ../functions.php:136
+#, php-format
+msgid "<strong><a href=\"%s\">Compositio Theme</a></strong> - Logo Options"
+msgstr "<strong><a href=\"%s\">Thème Compositio</a></strong> - Options du logo"
+
+#: ../functions.php:140
+msgid "Settings saved."
+msgstr "Paramètres enregistrés."
+
+#: ../functions.php:143
+msgid "Select Logo Type:"
+msgstr "Choisir le type de logo&nbsp;:"
+
+#: ../functions.php:144
+msgid "Text Logo"
+msgstr "Logo textuel"
+
+#: ../functions.php:145
+msgid "Image Logo"
+msgstr "Logo en image"
+
+#: ../functions.php:147
+#, php-format
+msgid "1. <strong>Text Logo</strong> is the <span class=\"style1\">default setting, that means you will use as a logo the text from <a href=\"%1$s\">Blog Titile</a></span> and <a href=\"%2$s\">Tagline</a>"
+msgstr "1. <strong>Logo textuel</strong> est le <span class=\"style1\">paramètre par défaut, le texte utilisé sera le <a href=\"%1$s\">titre du Blog</a></span> et son <a href=\"%2$s\">slogan</a>."
+
+#: ../functions.php:148
+msgid "2. <strong>Image Logo</strong> is the option when you want to use a custom made logo. Upload your logo in the root folder of Compositio theme and name it <strong>logo.png</strong>. You can use the <strong>PSD Logo Template</strong> in the source folder of Compositio Theme. (Image limitations: 590px/85px)"
+msgstr "2. <strong>Logo en image</strong> est l'option à utiliser lorsque vous souhaitez utiliser un logo sur mesure (limitations de l'image&nbsp;: 590px/85px). Envoyez votre logo à la racine du répertoire du thème Compositio et nommez-le <strong>logo.png</strong>. Vous pouvez utiliser le <strong>modèle de logo au format PSD</strong> disponible dans le répertoire source du thème Copositio."
+
+#: ../functions.php:153
+msgid "Save changes"
+msgstr "Enregistrer les modifications"
+
+#: ../functions.php:158
+#, php-format
+msgid "Fore more updates regarding this theme visit us at %s"
+msgstr "Pour plus d'informations sur ce thème, visitez notre site %s"
+
+#: ../header.php:14
+#, php-format
+msgid "%s RSS Feed"
+msgstr "Flux RSS de %s"
+
+#: ../header.php:15
+#, php-format
+msgid "%s RSS 0.92 Feed"
+msgstr "Flux RSS 092 de %s"
+
+#: ../header.php:16
+#, php-format
+msgid "%s Atom Feed"
+msgstr "Flux Atom de %s"
+
+#: ../header.php:30
+msgid "Home"
+msgstr "Accueil"
+
+#: ../index.php:20
+msgid "Read the rest of this entry &raquo;"
+msgstr "Lire la suite de cet article &raquo;"
+
+#: ../index.php:23
+#: ../page.php:17
+msgid "Edit this entry."
+msgstr "Éditer cet article."
+
+#: ../nav.php:2
+msgid "Older Entries"
+msgstr "Articles plus anciens"
+
+#: ../nav.php:3
+msgid "Newer Entries"
+msgstr "Articles plus récents"
+
+#: ../page.php:10
+msgid "Read the rest of this page &raquo;"
+msgstr "Lire la suite de cet article &raquo;"
+
+#: ../page.php:12
+msgid "Pages:"
+msgstr "Pages&nbsp;:"
+
+#: ../search.php:5
+msgid "Search Results"
+msgstr "Résultats de la recherche"
+
+#: ../search.php:40
+msgid "Not Found"
+msgstr "Aucun résultat"
+
+#: ../searchform.php:3
+#: ../sidebar.php:7
+msgid "Search"
+msgstr "Recherche"
+
+#: ../sidebar.php:8
+msgid "Search|verb"
+msgstr "Rechercher"
+
+#: ../sidebar.php:13
+#, php-format
+msgid "<a href=\"%s\">Entries</a> (RSS)"
+msgstr "<a href=\"%s\">Articles</a> (RSS)"
+
+#: ../sidebar.php:14
+#, php-format
+msgid "<a href=\"%s\">Comments</a> (RSS)"
+msgstr "<a href=\"%s\">Commentaires</a> (RSS)"
+
+#: ../sidebar.php:22
+msgid "About this blog"
+msgstr "À propos de ce blog"
+
+#: ../sidebar.php:30
+msgid "Photostream"
+msgstr "Galerie photos"
+
+#: ../sidebar.php:42
+msgid "Categories"
+msgstr "Catégories"
+
+#: ../sidebar.php:48
+msgid "Archives"
+msgstr "Archives"
+
+#: ../sidebar.php:59
+msgid "Recent Comments"
+msgstr "Commentaires récents"
+
+#: ../sidebar.php:60
+msgid "Recent Posts"
+msgstr "Articles récents"
+
+#: ../sidebar.php:61
+msgid "Tags"
+msgstr "Tags"
+
