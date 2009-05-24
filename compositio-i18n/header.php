@@ -5,7 +5,7 @@
 <? $theTitle=wp_title(" - ", false); if($theTitle != "") { ?><title><?php echo wp_title("",false); ?> - <?php bloginfo('name'); ?></title>
 <? } else { ?><title><?php bloginfo('name'); ?></title><? } ?>
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="pragma" content="no-cache" />
 <meta http-equiv="cache-control" content="no-cache" />
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" />
