@@ -190,9 +190,11 @@ h1, h2, h3, h4 { font-family: Arial, Helvetica, sans-serif; }
  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 .SR .search { background: #3d96d5 url(images/search-bkg.png) no-repeat left bottom; right: 0px; padding: 15px; overflow: hidden;}
 /**/ *html .SR .search  { height: 1%;} /**/ 
-.SR .search form { width: 245px; padding: 10px; border: 1px solid #3ac6e5; background: #2abada; }
-.SR .search fieldset { overflow: hidden; height: 1%;  }
-.SR .search input { float: left; margin-right: 2px; background: url(images/search-input.png) no-repeat; border: none; padding: 5px 3px 5px 65px; width: 145px; color:#666;}
+.SR .search form { width: 245px; padding: 10px; border: 1px solid #3ac6e5; background: #2abada; position: relative; }
+.SR .search fieldset { overflow: hidden; height: 1%; }
+.SR .search legend { display: inline; }
+.SR .search legend span { position: absolute; color: #FFF; height: 24px; line-height: 22px; text-align: center; width: 68px; }
+.SR .search input { float: left; margin-right: 2px; background: #262C35 url(images/search-input.png) no-repeat 68px 0; border: none; padding: 4px 4px 0 75px; width: 138px; color:#666; height: 20px; }
 .SR .search button { float: left; background: url(images/search-button.png) no-repeat; width: 26px; height: 24px; border: none; cursor: pointer; text-indent: -1000em; }
 .SR .syn ul { margin: 10px 0px;}
 .SR .syn li { background: url(images/SynIco.png) no-repeat left center; margin: 0px 5px 0px 0px; padding: 3px 0px 3px 15px; list-style-type: none; color:#ffcc66; display: inline; font: bold 14px/14px 'Arial'; letter-spacing: -1px;}
