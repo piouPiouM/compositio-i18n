@@ -1,5 +1,7 @@
 <?php
 
+load_theme_textdomain('compositio', get_template_directory() . '/languages');
+
 if ( function_exists('register_sidebar') )
     register_sidebars(1, array(
         'before_widget' => '<div id="%1$s" class="widget %2$s">',
